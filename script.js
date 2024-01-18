@@ -9,19 +9,19 @@ const makeChange = (c) => {
 	};
 	if(c / 25 >0){
 		ans.q = parseInt(c/25);
-		c -= 25* ans.q;
+		c = c%25
 	}
 	if(c / 10 >0){
 		ans.d = parseInt(c/10);
-		c -= 10 * ans.d
+		c = c%10
 	}
 	if(c / 5 >0){
 		ans.n = parseInt(c/5);
-		c -= 5 * ans.n
+		c = c%5
 	}
 	if(c / 1 >0){
 		ans.p = parseInt(c/1);
-		c -= 1 * ans.d
+		
 	}
 	return ans;
 };
